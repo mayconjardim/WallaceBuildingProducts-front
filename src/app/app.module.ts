@@ -10,9 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 //Components
 import { NavComponent } from './shared/components/nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent],
+  declarations: [AppComponent, NavComponent, ManagerListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
