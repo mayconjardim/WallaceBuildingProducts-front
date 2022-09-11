@@ -12,9 +12,10 @@ import { NavComponent } from './shared/components/nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './private/components/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ManagerListComponent],
+  declarations: [AppComponent, NavComponent, ManagerListComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

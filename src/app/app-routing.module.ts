@@ -1,9 +1,11 @@
+import { LoginComponent } from './private/components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: NavComponent,
