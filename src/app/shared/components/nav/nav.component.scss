@@ -1,0 +1,32 @@
+:host {
+  * {
+    background-color: var(--secondary-color);
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  nav {
+    ul li {
+      text-align: center;
+    }
+
+    a {
+      color: #6b7f8a;
+    }
+    a:hover {
+      color: var(--primary-color);
+      text-underline-position: under;
+      text-decoration: underline;
+    }
+
+    .icons {
+      font-size: 1.8rem;
+      color: #6b7f8a;
+    }
+  }
+}

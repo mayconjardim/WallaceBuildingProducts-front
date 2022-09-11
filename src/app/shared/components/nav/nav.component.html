@@ -1,1 +1,24 @@
-<p>nav works!</p>
+<header>
+  <img src="assets/img/logo-wbp.svg" alt="Logo" />
+</header>
+<nav>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <fa-icon class="icons" [icon]="faClipboard"></fa-icon>
+      <a class="nav-link" routerLink="#"> Orders </a>
+    </li>
+
+    <li class="nav-item">
+      <fa-icon class="icons" [icon]="faHelmetSafety"></fa-icon>
+      <a class="nav-link" routerLink="#">Dispatchers</a>
+    </li>
+    <li class="nav-item">
+      <fa-icon class="icons" [icon]="faAddressCard"></fa-icon>
+      <a class="nav-link" routerLink="#">Managers</a>
+    </li>
+    <li class="nav-item">
+      <fa-icon class="icons" [icon]="faUser"></fa-icon>
+      <a class="nav-link" routerLink="#">Admin</a>
+    </li>
+  </ul>
+</nav>

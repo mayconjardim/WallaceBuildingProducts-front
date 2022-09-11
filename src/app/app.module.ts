@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Components
 import { NavComponent } from './shared/components/nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, NavComponent],
@@ -18,6 +19,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
