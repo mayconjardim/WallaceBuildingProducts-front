@@ -1,0 +1,42 @@
+:host {
+  .content-grid {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 0px;
+    height: 100%;
+  }
+
+  #item-0 {
+    background-color: var(--white);
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 4;
+    grid-column-end: 7;
+  }
+
+  .page-title {
+    background-color: var(--white);
+    h1 {
+      font-size: 1.25rem;
+      background-color: var(--white);
+      margin: 1.25rem;
+    }
+  }
+
+  .content {
+    background-color: var(--white);
+    margin: 1.25rem;
+  }
+
+  .d-flex {
+    background-color: var(--white);
+  }
+
+  .vasco {
+    background-color: #6b7f8a !important;
+  }
+}

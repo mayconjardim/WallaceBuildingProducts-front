@@ -1,15 +1,13 @@
+import { Manager } from './../../models/Manager';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-manager-list',
   templateUrl: './manager-list.component.html',
-  styleUrls: ['./manager-list.component.scss']
+  styleUrls: ['./manager-list.component.scss'],
 })
 export class ManagerListComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

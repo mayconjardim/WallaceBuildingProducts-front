@@ -1,14 +1,16 @@
-@import "./config-scss/variables.scss";
-@import "./config-scss/reset.scss";
+@use "./config-scss/variables.scss";
+@use "./config-scss/reset.scss";
 
-html {
-  font-family: "Roboto", sans-serif;
+* {
   background-color: var(--secondary-color);
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-  background-color: var(--secondary-color);
-  max-width: 50rem;
+  width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

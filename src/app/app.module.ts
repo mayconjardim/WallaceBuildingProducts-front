@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, NavComponent, ManagerListComponent],
@@ -21,6 +22,7 @@ import { ManagerListComponent } from './private/components/manager-list/manager-
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
