@@ -1,4 +1,7 @@
 :host {
+  * {
+    background-color: var(--secondary-color);
+  }
   .content-grid {
     display: grid;
 

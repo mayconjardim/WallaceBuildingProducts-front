@@ -1,3 +1,4 @@
+import { AuthGuard } from './core/auth/auth.guard';
 import { LoginComponent } from './private/components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,6 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: NavComponent,
+    canActivate: [AuthGuard],
     children: [{ path: 'managers', component: ManagerListComponent }],
   },
 ];

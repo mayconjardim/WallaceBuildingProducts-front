@@ -13,9 +13,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './private/components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ManagerListComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    ManagerListComponent,
+    LoginComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +30,11 @@ import { LoginComponent } from './private/components/login/login.component';
     HttpClientModule,
     FontAwesomeModule,
     NgbModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

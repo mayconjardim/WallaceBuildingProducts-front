@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
-import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
-import { Credentials } from 'src/app/private/models/credentials';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/core/auth.service';
+import { Credentials } from 'src/app/private/models/Credentials';
 
 @Component({
   selector: 'app-login',
@@ -17,15 +19,29 @@ export class LoginComponent implements OnInit {
   name = new FormControl(null, Validators.required);
   password = new FormControl(null, Validators.minLength(3));
 
-  constructor() {}
+  constructor(
+    private toast: ToastrService,
+    private service: AuthService,
+    private router: Router
+  ) {}
+
+  login() {
+    this.service.authenticate(this.creds).subscribe(
+      (response) => {
+        this.service.successfulLogin(
+          response.headers.get('Authorization').substring(7)
+        );
+        this.router.navigate(['']);
+      },
+      () => {
+        this.toast.error('Name or password invalid!');
+      }
+    );
+  }
 
   ngOnInit(): void {}
 
   validForms(): boolean {
-    if (this.name.valid && this.password.valid) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.name.valid && this.password.valid;
   }
 }
