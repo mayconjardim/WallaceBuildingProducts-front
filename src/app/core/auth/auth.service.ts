@@ -1,7 +1,7 @@
-import { API_CONFIG } from './../config/api.config';
+import { API_CONFIG } from '../../config/api.config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Credentials } from '../private/models/Credentials';
+import { Credentials } from '../../private/models/Credentials';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
@@ -29,5 +29,9 @@ export class AuthService {
       return !this.jwtService.isTokenExpired(token);
     }
     return false;
+  }
+
+  logout() {
+    localStorage.clear();
   }
 }

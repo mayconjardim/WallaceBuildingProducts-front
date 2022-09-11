@@ -14,6 +14,7 @@ import { ManagerListComponent } from './private/components/manager-list/manager-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './private/components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
       progressBar: true,
     }),
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -20,6 +20,10 @@
       <fa-icon class="icons" [icon]="faUser"></fa-icon>
       <a class="nav-link" routerLink="admins">Admin</a>
     </li>
+    <li class="nav-item">
+      <fa-icon class="icons" [icon]="faArrowRightFromBracket"></fa-icon>
+      <a class="nav-link" (click)="logout()">Logout</a>
+    </li>
   </ul>
 </nav>
 <main class="contents">

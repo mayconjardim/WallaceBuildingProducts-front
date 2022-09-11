@@ -1,10 +1,14 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   faClipboard,
   faHelmetSafety,
   faAddressCard,
   faUser,
+  faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -16,8 +20,21 @@ export class NavComponent implements OnInit {
   faHelmetSafety = faHelmetSafety;
   faAddressCard = faAddressCard;
   faUser = faUser;
+  faArrowRightFromBracket = faArrowRightFromBracket;
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private auth: AuthService,
+    private toast: ToastrService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.navigate(['managers']);
+  }
+
+  logout() {
+    this.router.navigate(['login']);
+    this.auth.logout();
+    this.toast.info('Logout Successful');
+  }
 }
