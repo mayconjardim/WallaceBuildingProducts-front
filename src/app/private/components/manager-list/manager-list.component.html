@@ -1,23 +1,27 @@
-<!-- <div class="content-grid">
-  <div id="item-0">
-    <div class="page-title"><h1>Managers</h1></div>
-    <div class="content">
-      <table class="table table-striped table-light">
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">E-mail</th>
-            <th scope="col">Phone number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let manager of managers; index as i">
-            <th scope="row">{{ manager.name }}</th>
-            <td>{{ manager.email }}</td>
-            <td>{{ manager.phoneNumber }</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="container">
+  <div class="infos">
+    <button type="button" class="btn btn-outline-success create">
+      New Manager
+    </button>
   </div>
-</div> -->
+
+  <div class="manager-table">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let manager of managers | async">
+          <td>{{ manager.name }}</td>
+          <td>{{ manager.email }}</td>
+          <td>{{ manager.phoneNumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

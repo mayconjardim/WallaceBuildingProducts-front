@@ -1,31 +1,22 @@
-:host {
-  * {
-    background-color: var(--secondary-color);
-    color: var(--white);
+.btn-color {
+  background-color: #03693e;
+  color: #fff;
+  &:hover {
+    background-color: #03693e;
+    color: #ccc;
   }
-  .content-grid {
-    display: grid;
+}
 
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.profile-image-pic {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
 
-    gap: 0px;
-    height: 100%;
-  }
+.cardbody-color {
+  background-color: #ebf2fa;
+}
 
-  #item-0 {
-    background-color: var(--white);
-    grid-row-start: 1;
-    grid-column-start: 2;
-
-    grid-row-end: 4;
-    grid-column-end: 7;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-  }
+a {
+  text-decoration: none;
 }

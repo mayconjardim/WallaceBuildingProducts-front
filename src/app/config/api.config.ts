@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl: 'http://localhost:8080',
+  baseUrl: 'http://192.168.2.107:8080',
 };
