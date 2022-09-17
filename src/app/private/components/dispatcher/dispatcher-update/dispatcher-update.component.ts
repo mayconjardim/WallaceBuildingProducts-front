@@ -58,6 +58,6 @@ export class DispatcherUpdateComponent implements OnInit {
   }
 
   validForm(): boolean {
-    return this.name.valid && this.email.valid && this.phoneNumber.valid;
+    return this.name.valid;
   }
 }

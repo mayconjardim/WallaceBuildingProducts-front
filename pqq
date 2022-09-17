@@ -1,0 +1,107 @@
+[33mcommit 093ae42859cbd02413d71839af6d8f736d0f2340[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sat Sep 17 17:48:47 2022 -0300
+
+    Dispatcher crud
+
+[33mcommit f7bc5e945151c8839a8bdd5d0f85a07d150a1119[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Fri Sep 16 22:35:17 2022 -0300
+
+    Manager delete
+
+[33mcommit 402d54a17002f7074e5703a34a3e20d3a1bf1f51[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Fri Sep 16 22:24:58 2022 -0300
+
+    Manager update
+
+[33mcommit 7d9920299bae9966743308cd64db07fc2efa1090[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Fri Sep 16 21:36:30 2022 -0300
+
+    Criar novo tecnico finalizado
+
+[33mcommit 1ff6b04b3451101b103514117637d7bd790978e0[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Fri Sep 16 21:03:15 2022 -0300
+
+    Actions para manger list
+
+[33mcommit c5cbae087938756b328f94e369f07ffca0f6a7a0[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Thu Sep 15 21:03:27 2022 -0300
+
+    manager-list
+
+[33mcommit 5da307a83ad06e347e63e14140f40c6c6c7d1e23[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 18:52:38 2022 -0300
+
+    Auth interceptor para http
+
+[33mcommit c75a7f4f531a34d43734238081ad9c7f97075bfe[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 18:24:32 2022 -0300
+
+    Autenticação de Login
+
+[33mcommit 02b7756c5ec0604050421cd4829c0449d221aab7[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 17:47:40 2022 -0300
+
+    toastr
+
+[33mcommit 1b90556f12adea848f59ae053e9f159d86c0ea13[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 17:46:19 2022 -0300
+
+    Validação de forms
+
+[33mcommit 2f37b605f314b62261b119e066e552d085f6e3ef[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 17:16:59 2022 -0300
+
+    Login component
+
+[33mcommit f7ae6044ce3467afd28cf4f952512698eb917c50[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 17:15:30 2022 -0300
+
+    manager list estilizado
+
+[33mcommit 428170c22fc39977022d5dc1ece8abdb5fc50445[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 15:03:03 2022 -0300
+
+    Componente manager list criado
+
+[33mcommit 659a3a3eff2587707c6ee72144809f9b710d36a7[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 14:55:09 2022 -0300
+
+    Nav estilizado, adicionado icons font awesome
+
+[33mcommit 9fbf4202a2ab2f085064498447b0fe8c9f76bc34[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 09:00:49 2022 -0300
+
+    scss personalizado
+
+[33mcommit 2713e59dc45594bf801dc98c241363d35e3f6d79[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 08:41:54 2022 -0300
+
+    Componente nav
+
+[33mcommit b2a4967071ac9337054f1bc89e5cc3f59361a039[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 08:29:10 2022 -0300
+
+    Instalando boostrap no projeto
+
+[33mcommit 7489eaf3dbc9d158e5f10778b7e0a05600d41467[m
+Author: Maycon Jardim <mayconsmill@gmail.com>
+Date:   Sun Sep 11 08:11:10 2022 -0300
+
+    Projeto Criado

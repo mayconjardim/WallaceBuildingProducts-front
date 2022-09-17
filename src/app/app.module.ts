@@ -10,14 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 //Components
 import { NavComponent } from './shared/components/nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ManagerListComponent } from './private/components/manager/manager-list/manager-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './private/components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
+import { ManagerListComponent } from './private/components/manager/manager-list/manager-list.component';
 import { ManagerCreateComponent } from './private/components/manager/manager-create/manager-create.component';
 import { ManagerUpdateComponent } from './private/components/manager/manager-update/manager-update.component';
 import { ManagerDeleteComponent } from './private/components/manager/manager-delete/manager-delete.component';
+import { DispatcherListComponent } from './private/components/dispatcher/dispatcher-list/dispatcher-list.component';
 import { DispatcherCreateComponent } from './private/components/dispatcher/dispatcher-create/dispatcher-create.component';
 import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
 import { DispatcherDeleteComponent } from './private/components/dispatcher/dispatcher-delete/dispatcher-delete.component';
@@ -34,11 +35,13 @@ import { DispatcherDeleteComponent } from './private/components/dispatcher/dispa
     DispatcherCreateComponent,
     DispatcherUpdateComponent,
     DispatcherDeleteComponent,
+    DispatcherListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
