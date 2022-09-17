@@ -27,4 +27,8 @@ export class ManagerService {
       manager
     );
   }
+
+  delete(id: any): Observable<Manager> {
+    return this.http.delete<Manager>(`${API_CONFIG.baseUrl}/managers/${id}`);
+  }
 }

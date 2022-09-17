@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">Delete manager</div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Name</label>
+          <input
+            [(ngModel)]="manager.name"
+            name="name"
+            [disabled]="true"
+            type="text"
+            class="form-control"
+            id="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            [(ngModel)]="manager.email"
+            name="email"
+            [disabled]="true"
+            type="text"
+            class="form-control"
+            id="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="number" class="form-label">Phone Number</label>
+          <input
+            [(ngModel)]="manager.phoneNumber"
+            name="phoneNumber"
+            [disabled]="true"
+            type="text"
+            class="form-control"
+            id="number"
+          />
+        </div>
+      </form>
+      <button (click)="delete()" class="btn btn-outline-success create">
+        Delete
+      </button>
+
+      <button routerLink="../../" class="btn btn-outline-success cancel">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

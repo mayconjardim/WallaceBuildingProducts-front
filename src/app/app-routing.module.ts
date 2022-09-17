@@ -1,3 +1,4 @@
+import { ManagerDeleteComponent } from './private/components/manager/manager-delete/manager-delete.component';
 import { ManagerUpdateComponent } from './private/components/manager/manager-update/manager-update.component';
 import { AuthGuard } from './core/auth/auth.guard';
 import { LoginComponent } from './private/components/login/login.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'managers', component: ManagerListComponent },
       { path: 'managers/create', component: ManagerCreateComponent },
       { path: 'managers/update/:id', component: ManagerUpdateComponent },
+      { path: 'managers/delete/:id', component: ManagerDeleteComponent },
     ],
   },
 ];
