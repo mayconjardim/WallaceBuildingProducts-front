@@ -6,6 +6,8 @@
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Name</label>
           <input
+            [(ngModel)]="manager.name"
+            name="name"
             [formControl]="name"
             required
             type="text"
@@ -18,6 +20,8 @@
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input
+            [(ngModel)]="manager.email"
+            name="email"
             [formControl]="email"
             required
             type="text"
@@ -29,6 +33,8 @@
         <div class="mb-3">
           <label for="number" class="form-label">Phone Number</label>
           <input
+            [(ngModel)]="manager.phoneNumber"
+            name="phoneNumber"
             [formControl]="phoneNumber"
             required
             type="text"
@@ -38,7 +44,11 @@
           />
         </div>
       </form>
-      <button [disabled]="!validForm()" class="btn btn-outline-success create">
+      <button
+        (click)="create()"
+        [disabled]="!validForm()"
+        class="btn btn-outline-success create"
+      >
         Create
       </button>
     </div>

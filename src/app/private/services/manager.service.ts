@@ -13,4 +13,8 @@ export class ManagerService {
   findAll(): Observable<Manager[]> {
     return this.http.get<Manager[]>(`${API_CONFIG.baseUrl}/managers`);
   }
+
+  create(manager: Manager): Observable<Manager> {
+    return this.http.post<Manager>(`${API_CONFIG.baseUrl}/managers`, manager);
+  }
 }
