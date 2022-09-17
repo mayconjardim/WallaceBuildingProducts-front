@@ -1,6 +1,10 @@
 <div class="container">
   <div class="infos">
-    <button type="button" class="btn btn-outline-success create">
+    <button
+      type="button"
+      routerLink="create"
+      class="btn btn-outline-success create"
+    >
       New Manager
     </button>
   </div>
@@ -10,7 +14,7 @@
       <thead>
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">E-mail</th>
+          <th scope="col">Email</th>
           <th scope="col">Phone Number</th>
           <th scope="col">Actions</th>
         </tr>
@@ -20,6 +24,14 @@
           <td>{{ manager.name }}</td>
           <td>{{ manager.email }}</td>
           <td>{{ manager.phoneNumber }}</td>
+          <td>
+            <a routerLink="#"
+              ><fa-icon class="icons-edit" [icon]="faUserPen"></fa-icon
+            ></a>
+            <a routerLink=""
+              ><fa-icon class="icons-delete" [icon]="faUserMinus"></fa-icon
+            ></a>
+          </td>
         </tr>
       </tbody>
     </table>

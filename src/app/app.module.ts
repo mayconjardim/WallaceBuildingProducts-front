@@ -10,11 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 //Components
 import { NavComponent } from './shared/components/nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ManagerListComponent } from './private/components/manager-list/manager-list.component';
+import { ManagerListComponent } from './private/components/manager/manager-list/manager-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './private/components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
+import { ManagerCreateComponent } from './private/components/manager/manager-create/manager-create.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
     NavComponent,
     ManagerListComponent,
     LoginComponent,
+    ManagerCreateComponent,
   ],
   imports: [
     BrowserModule,

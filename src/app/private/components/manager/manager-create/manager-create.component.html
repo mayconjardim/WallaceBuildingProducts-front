@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">Create new manager</div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Name</label>
+          <input
+            [formControl]="name"
+            required
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Manager name"
+            maxlength="50"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            [formControl]="email"
+            required
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="name@email.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="number" class="form-label">Phone Number</label>
+          <input
+            [formControl]="phoneNumber"
+            required
+            type="text"
+            class="form-control"
+            id="number"
+            placeholder="+16037685402"
+          />
+        </div>
+      </form>
+      <button [disabled]="!validForm()" class="btn btn-outline-success create">
+        Create
+      </button>
+    </div>
+  </div>
+</div>

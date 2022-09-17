@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { ManagerService } from '../../services/manager.service';
-import { Manager } from '../../models/Manager';
-import { faThumbsDown } from '@fortawesome/free-regular-svg-icons';
+import { ManagerService } from '../../../services/manager.service';
+import { Manager } from '../../../models/Manager';
+import { faUserPen, faUserMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-manager-list',
@@ -10,6 +10,9 @@ import { faThumbsDown } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./manager-list.component.scss'],
 })
 export class ManagerListComponent implements OnInit {
+  faUserPen = faUserPen;
+  faUserMinus = faUserMinus;
+
   managers: Observable<Manager[]>;
 
   constructor(private service: ManagerService) {
