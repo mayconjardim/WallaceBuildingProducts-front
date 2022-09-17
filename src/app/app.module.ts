@@ -18,6 +18,9 @@ import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
 import { ManagerCreateComponent } from './private/components/manager/manager-create/manager-create.component';
 import { ManagerUpdateComponent } from './private/components/manager/manager-update/manager-update.component';
 import { ManagerDeleteComponent } from './private/components/manager/manager-delete/manager-delete.component';
+import { DispatcherCreateComponent } from './private/components/dispatcher/dispatcher-create/dispatcher-create.component';
+import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
+import { DispatcherDeleteComponent } from './private/components/dispatcher/dispatcher-delete/dispatcher-delete.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { ManagerDeleteComponent } from './private/components/manager/manager-del
     ManagerCreateComponent,
     ManagerUpdateComponent,
     ManagerDeleteComponent,
+    DispatcherCreateComponent,
+    DispatcherUpdateComponent,
+    DispatcherDeleteComponent,
   ],
   imports: [
     BrowserModule,

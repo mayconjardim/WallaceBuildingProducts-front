@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">Updated dispatcher</div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Name</label>
+          <input
+            [(ngModel)]="dispatcher.name"
+            name="name"
+            [formControl]="name"
+            required
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Dispatcher name"
+            maxlength="50"
+          />
+        </div>
+      </form>
+      <button
+        (click)="update()"
+        [disabled]="!validForm()"
+        class="btn btn-outline-success create"
+      >
+        Update
+      </button>
+
+      <button routerLink="../../" class="btn btn-outline-success cancel">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

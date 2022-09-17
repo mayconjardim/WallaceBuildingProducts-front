@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="infos">
+    <button
+      type="button"
+      routerLink="create"
+      class="btn btn-outline-success create"
+    >
+      New Dispatcher
+    </button>
+  </div>
+
+  <div class="dispatcher-table">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dispatcher of dispatchers | async">
+          <td>{{ dispatcher.name }}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

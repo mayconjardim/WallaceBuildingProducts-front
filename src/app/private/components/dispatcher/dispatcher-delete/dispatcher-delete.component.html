@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">Delete dispatcher</div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Name</label>
+          <input
+            [(ngModel)]="dispatcher.name"
+            name="name"
+            [disabled]="true"
+            type="text"
+            class="form-control"
+            id="name"
+          />
+        </div>
+      </form>
+      <button (click)="delete()" class="btn btn-outline-success create">
+        Delete
+      </button>
+
+      <button routerLink="../../" class="btn btn-outline-success cancel">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
