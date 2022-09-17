@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card text-center">
-    <div class="card-header">Create new manager</div>
+    <div class="card-header">Updated manager</div>
     <div class="card-body">
       <form>
         <div class="mb-3">
@@ -45,12 +45,13 @@
         </div>
       </form>
       <button
-        (click)="create()"
+        (click)="update()"
         [disabled]="!validForm()"
         class="btn btn-outline-success create"
       >
-        Create
+        Update
       </button>
+
       <button routerLink="../../" class="btn btn-outline-success cancel">
         Cancel
       </button>

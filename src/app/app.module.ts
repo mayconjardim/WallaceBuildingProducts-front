@@ -16,6 +16,7 @@ import { LoginComponent } from './private/components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './core/interceptors/auth.interceptor';
 import { ManagerCreateComponent } from './private/components/manager/manager-create/manager-create.component';
+import { ManagerUpdateComponent } from './private/components/manager/manager-update/manager-update.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ManagerCreateComponent } from './private/components/manager/manager-cre
     ManagerListComponent,
     LoginComponent,
     ManagerCreateComponent,
+    ManagerUpdateComponent,
   ],
   imports: [
     BrowserModule,

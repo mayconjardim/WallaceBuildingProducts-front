@@ -1,6 +1,7 @@
+import { ManagerUpdateComponent } from './private/components/manager/manager-update/manager-update.component';
 import { AuthGuard } from './core/auth/auth.guard';
 import { LoginComponent } from './private/components/login/login.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ManagerListComponent } from './private/components/manager/manager-list/manager-list.component';
 import { NavComponent } from './shared/components/nav/nav.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'managers', component: ManagerListComponent },
       { path: 'managers/create', component: ManagerCreateComponent },
+      { path: 'managers/update/:id', component: ManagerUpdateComponent },
     ],
   },
 ];
