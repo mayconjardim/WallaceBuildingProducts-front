@@ -11,15 +11,19 @@ import { Orders } from 'src/app/private/models/Orders';
 export class OrdersListComponent implements OnInit {
   faUserPen = faUserPen;
   faUserMinus = faUserMinus;
-  searchValue?: string;
-
   orders: Observable<Orders[]>;
+
+  page = 1;
+  pageSize = 20;
 
   constructor(private service: OrderService) {
     this.orders = this.service.findAll();
   }
-
   ngOnInit(): void {}
+
+  getLengt() {
+    this.orders.subscribe((result) => result.length);
+  }
 
   returnStatus(status: any): string {
     if (status == '0') {
