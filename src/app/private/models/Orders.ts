@@ -4,7 +4,7 @@ export interface Orders {
   endDate?: string;
   priority: string;
   status: string;
-  clienteName: string;
+  clientName: string;
   clientAddress: string;
   headline: string;
   description: string;

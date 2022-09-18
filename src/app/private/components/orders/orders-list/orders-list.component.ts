@@ -1,8 +1,10 @@
 import { OrderService } from './../../../services/orders.service';
 import { Component, OnInit } from '@angular/core';
 import { faUserPen, faUserMinus } from '@fortawesome/free-solid-svg-icons';
-import { Observable, filter } from 'rxjs';
+import { Observable } from 'rxjs';
+
 import { Orders } from 'src/app/private/models/Orders';
+
 @Component({
   selector: 'app-orders-list',
   templateUrl: './orders-list.component.html',

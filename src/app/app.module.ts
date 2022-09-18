@@ -23,7 +23,9 @@ import { DispatcherCreateComponent } from './private/components/dispatcher/dispa
 import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
 import { DispatcherDeleteComponent } from './private/components/dispatcher/dispatcher-delete/dispatcher-delete.component';
 import { OrdersListComponent } from './private/components/orders/orders-list/orders-list.component';
-import { FilterPipe } from './shared/pipes/filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './shared/pipes/filtro.pipe';
+import { OrderCreateComponent } from './private/components/orders/order-create/order-create.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +42,13 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
     DispatcherListComponent,
     OrdersListComponent,
     FilterPipe,
+    OrderCreateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-
+    Ng2SearchPipeModule,
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,

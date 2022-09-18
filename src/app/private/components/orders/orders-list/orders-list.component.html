@@ -29,12 +29,12 @@
           *ngFor="
             let order of orders
               | async
-              | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
+              | slice: (page - 1) * pageSize:page * pageSize
           "
         >
           <td>{{ order.id }}</td>
           <td>{{ order.headline }}</td>
-          <td>{{ order.clienteName }}</td>
+          <td>{{ order.clientName }}</td>
           <td>{{ order.nameManager }}</td>
           <td>{{ order.nameDispatcher }}</td>
           <td>{{ order.startDate }}</td>
@@ -51,7 +51,9 @@
         </tr>
       </tbody>
     </table>
+
     <ngb-pagination
+      class="pagination"
       [pageSize]="25"
       [collectionSize]="100"
       [(page)]="page"
