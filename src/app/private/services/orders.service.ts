@@ -13,4 +13,8 @@ export class OrderService {
   findAll(): Observable<Orders[]> {
     return this.http.get<Orders[]>(`${API_CONFIG.baseUrl}/orders`);
   }
+
+  create(order: Orders): Observable<Orders> {
+    return this.http.post<Orders>(`${API_CONFIG.baseUrl}/orders`, order);
+  }
 }

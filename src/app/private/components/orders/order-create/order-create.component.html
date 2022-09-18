@@ -4,63 +4,112 @@
     <div class="card-body">
       <form class="row g-3">
         <div class="col-md-12">
-          <label for="inputEmail4" class="form-label">Headline</label>
+          <label for="inputHeadline" class="form-label">Headline</label>
           <input
+            [(ngModel)]="order.headline"
+            name="headline"
+            [formControl]="headline"
+            required
             type="email"
             class="form-control"
-            id="inputEmail4"
+            id="inputHeadline"
             placeholder="Headline..."
           />
         </div>
         <div class="col-md-6">
-          <label for="inputState" class="form-label">Manager</label>
-          <select id="inputState" class="form-select form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="inputManager" class="form-label">Manager</label>
+          <select
+            [(ngModel)]="order.manager"
+            name="manager"
+            [formControl]="manager"
+            required
+            id="inputManager"
+            class="form-select form-control"
+          >
+            <option *ngFor="let man of managers" value="{{ man.id }}">
+              {{ man.name }}
+            </option>
           </select>
         </div>
         <div class="col-md-6">
-          <label for="inputState" class="form-label">Dispatcher</label>
-          <select id="inputState" class="form-select form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="inputDispatcher" class="form-label">Dispatcher</label>
+          <select
+            [(ngModel)]="order.dispatcher"
+            name="dispatcher"
+            [formControl]="manager"
+            id="inputDispatcher"
+            class="form-select form-control"
+            [formControl]="dispatcher"
+            required
+          >
+            <option *ngFor="let dis of dispatchers" value="{{ dis.id }}">
+              {{ dis.name }}
+            </option>
           </select>
         </div>
         <div class="col-md-6">
-          <label for="inputState" class="form-label">Priority</label>
-          <select id="inputState" class="form-select form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="inputPriority" class="form-label">Priority</label>
+          <select
+            [(ngModel)]="order.priority"
+            name="priority"
+            id="inputPriority"
+            class="form-select form-control"
+            [formControl]="priority"
+            required
+          >
+            <option value="0">LOW</option>
+            <option value="1">MEDIUM</option>
+            <option value="2">HIGH</option>
           </select>
         </div>
         <div class="col-md-6">
-          <label for="inputState" class="form-label">Status</label>
-          <select id="inputState" class="form-select form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="inputStatus" class="form-label">Status</label>
+          <select
+            [(ngModel)]="order.status"
+            name="status"
+            id="inputStatus"
+            class="form-select form-control"
+            [formControl]="status"
+            required
+          >
+            <option value="0">OPEN</option>
+            <option value="1">PROCESSING</option>
+            <option value="2">DISPATCHED</option>
           </select>
         </div>
         <div class="col-md-8">
-          <label for="inputPassword4" class="form-label">Client name</label>
+          <label for="inputClineName" class="form-label">Client name</label>
           <input
+            [(ngModel)]="order.clientName"
+            name="clientName"
+            [formControl]="clientName"
+            required
             type="text"
             class="form-control"
-            id="inputPassword4"
+            id="inputClineName"
             placeholder="John Doe"
           />
         </div>
         <div class="col-md-4">
           <label for="inputZip" class="form-label">Zip</label>
           <input
+            [(ngModel)]="order.clientZip"
+            name="clientCity"
+            [formControl]="clientZip"
+            required
             type="text"
             class="form-control"
-            id="inputZip"
-            placeholder="31324"
+            id="inputCity"
+            placeholder="Danbury"
           />
         </div>
         <div class="col-md-8">
           <label for="inputAddress" class="form-label">Address</label>
           <input
+            [(ngModel)]="order.clientAddress"
+            name="clientAddress"
+            [formControl]="address"
+            required
             type="text"
             class="form-control"
             id="inputAddress"
@@ -71,6 +120,10 @@
         <div class="col-md-4">
           <label for="inputCity" class="form-label">City</label>
           <input
+            [(ngModel)]="order.clientCity"
+            name="clientCity"
+            [formControl]="clientCity"
+            required
             type="text"
             class="form-control"
             id="inputCity"
@@ -79,20 +132,28 @@
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Description</label
-          >
+          <label for="inputDescription" class="form-label">Description</label>
           <textarea
+            [(ngModel)]="order.description"
+            name="description"
+            [formControl]="description"
+            required
             class="form-control"
-            id="exampleFormControlTextarea1"
+            id="inputDescription"
             rows="3"
             placeholder="Enter Description"
           ></textarea>
         </div>
       </form>
 
-      <button class="btn btn-outline-success create">Create</button>
-      <button routerLink="../../" class="btn btn-outline-success cancel">
+      <button
+        [disabled]="!validForm()"
+        (click)="create()"
+        class="btn btn-outline-success create"
+      >
+        Create
+      </button>
+      <button routerLink="../" class="btn btn-outline-success cancel">
         Cancel
       </button>
     </div>

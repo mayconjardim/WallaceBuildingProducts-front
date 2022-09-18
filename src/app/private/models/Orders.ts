@@ -9,6 +9,8 @@ export interface Orders {
   headline: string;
   description: string;
   dispatcher: any;
+  clientZip: string;
+  clientCity: string;
   manager: any;
   nameDispatcher: string;
   nameManager: string;
