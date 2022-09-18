@@ -1,3 +1,4 @@
+import { OrdersListComponent } from './private/components/orders/orders-list/orders-list.component';
 import { AuthGuard } from './core/auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -28,6 +29,8 @@ const routes: Routes = [
       { path: 'dispatchers/create', component: DispatcherCreateComponent },
       { path: 'dispatchers/update/:id', component: DispatcherUpdateComponent },
       { path: 'dispatchers/delete/:id', component: DispatcherDeleteComponent },
+
+      { path: 'orders', component: OrdersListComponent },
     ],
   },
 ];

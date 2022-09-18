@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="infos">
+    <button
+      type="button"
+      routerLink="create"
+      class="btn btn-outline-success create"
+    >
+      New Order
+    </button>
+  </div>
+
+  <div class="input-box">
+    <label for="search">Search</label>
+    <input type="text" name="search" [(ngModel)]="searchValue" />
+    {{ searchValue }}
+  </div>
+
+  <div class="priority">
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineRadio1" value="0">OPEN</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineRadio1" value="1"
+        >PROCESSING</label
+      >
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineRadio1" value="2"
+        >DISPATCHED</label
+      >
+    </div>
+  </div>
+
+  <div class="manager-table">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Headline</th>
+          <th scope="col">Client</th>
+          <th scope="col">Manager</th>
+          <th scope="col">Dispatcher</th>
+          <th scope="col">Start date</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders | async | filter: searchValue">
+          <td>{{ order.id }}</td>
+          <td>{{ order.headline }}</td>
+          <td>{{ order.clienteName }}</td>
+          <td>{{ order.nameManager }}</td>
+          <td>{{ order.nameDispatcher }}</td>
+          <td>{{ order.startDate }}</td>
+          <td>{{ returnPriority(order.priority) }}</td>
+          <td>{{ returnStatus(order.status) }}</td>
+          <td>
+            <a routerLink="update/{{ order.id }}"
+              ><fa-icon class="icons-delete" [icon]="faUserMinus"></fa-icon
+            ></a>
+            <a routerLink="view/{{ order.id }}"
+              ><fa-icon class="icons-edit" [icon]="faUserPen"></fa-icon
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

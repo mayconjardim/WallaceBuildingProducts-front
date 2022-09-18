@@ -22,6 +22,8 @@ import { DispatcherListComponent } from './private/components/dispatcher/dispatc
 import { DispatcherCreateComponent } from './private/components/dispatcher/dispatcher-create/dispatcher-create.component';
 import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
 import { DispatcherDeleteComponent } from './private/components/dispatcher/dispatcher-delete/dispatcher-delete.component';
+import { OrdersListComponent } from './private/components/orders/orders-list/orders-list.component';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { DispatcherDeleteComponent } from './private/components/dispatcher/dispa
     DispatcherUpdateComponent,
     DispatcherDeleteComponent,
     DispatcherListComponent,
+    OrdersListComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
