@@ -1,1 +1,100 @@
-<p>order-create works!</p>
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">Create new order</div>
+    <div class="card-body">
+      <form class="row g-3">
+        <div class="col-md-12">
+          <label for="inputEmail4" class="form-label">Headline</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail4"
+            placeholder="Headline..."
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Manager</label>
+          <select id="inputState" class="form-select form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Dispatcher</label>
+          <select id="inputState" class="form-select form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Priority</label>
+          <select id="inputState" class="form-select form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Status</label>
+          <select id="inputState" class="form-select form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-8">
+          <label for="inputPassword4" class="form-label">Client name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputZip"
+            placeholder="31324"
+          />
+        </div>
+        <div class="col-md-8">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputCity"
+            placeholder="Danbury"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Description</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Enter Description"
+          ></textarea>
+        </div>
+      </form>
+
+      <button class="btn btn-outline-success create">Create</button>
+      <button routerLink="../../" class="btn btn-outline-success cancel">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
