@@ -26,6 +26,8 @@ import { OrdersListComponent } from './private/components/orders/orders-list/ord
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from './shared/pipes/filtro.pipe';
 import { OrderCreateComponent } from './private/components/orders/order-create/order-create.component';
+import { OrderUpdateComponent } from './private/components/orders/order-update/order-update.component';
+import { OrderReadComponent } from './private/components/orders/order-read/order-read.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { OrderCreateComponent } from './private/components/orders/order-create/o
     OrdersListComponent,
     FilterPipe,
     OrderCreateComponent,
+    OrderUpdateComponent,
+    OrderReadComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,8 @@ import { DispatcherListComponent } from './private/components/dispatcher/dispatc
 import { DispatcherCreateComponent } from './private/components/dispatcher/dispatcher-create/dispatcher-create.component';
 import { DispatcherDeleteComponent } from './private/components/dispatcher/dispatcher-delete/dispatcher-delete.component';
 import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
+import { OrderUpdateComponent } from './private/components/orders/order-update/order-update.component';
+import { OrderReadComponent } from './private/components/orders/order-read/order-read.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
 
       { path: 'orders', component: OrdersListComponent },
       { path: 'orders/create', component: OrderCreateComponent },
+      { path: 'orders/update/:id', component: OrderUpdateComponent },
+      { path: 'orders/read/:id', component: OrderReadComponent },
     ],
   },
 ];

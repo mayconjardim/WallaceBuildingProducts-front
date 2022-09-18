@@ -1,6 +1,6 @@
 import { OrderService } from './../../../services/orders.service';
 import { Component, OnInit } from '@angular/core';
-import { faUserPen, faUserMinus } from '@fortawesome/free-solid-svg-icons';
+import { faUserPen, faEye } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 
 import { Orders } from 'src/app/private/models/Orders';
@@ -12,7 +12,7 @@ import { Orders } from 'src/app/private/models/Orders';
 })
 export class OrdersListComponent implements OnInit {
   faUserPen = faUserPen;
-  faUserMinus = faUserMinus;
+  faEye = faEye;
   orders: Observable<Orders[]>;
 
   page = 1;

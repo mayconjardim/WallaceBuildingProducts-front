@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.router.navigate(['orders/create']);
+    this.router.navigate(['orders/read/1']);
   }
 
   logout() {

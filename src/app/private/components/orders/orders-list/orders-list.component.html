@@ -42,10 +42,10 @@
           <td>{{ returnStatus(order.status) }}</td>
           <td>
             <a routerLink="update/{{ order.id }}"
-              ><fa-icon class="icons-delete" [icon]="faUserMinus"></fa-icon
-            ></a>
-            <a routerLink="view/{{ order.id }}"
               ><fa-icon class="icons-edit" [icon]="faUserPen"></fa-icon
+            ></a>
+            <a routerLink="read/{{ order.id }}"
+              ><fa-icon class="icons-delete" [icon]="faEye"></fa-icon
             ></a>
           </td>
         </tr>

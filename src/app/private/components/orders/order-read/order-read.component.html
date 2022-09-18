@@ -1,15 +1,14 @@
 <div class="container">
   <div class="card text-center">
-    <div class="card-header">Create new order</div>
+    <div class="card-header">View order</div>
     <div class="card-body">
       <form class="row g-3">
         <div class="col-md-12">
           <label for="inputHeadline" class="form-label">Headline</label>
           <input
+            [disabled]="true"
             [(ngModel)]="order.headline"
             name="headline"
-            [formControl]="headline"
-            required
             type="email"
             class="form-control"
             id="inputHeadline"
@@ -19,43 +18,39 @@
         <div class="col-md-6">
           <label for="inputManager" class="form-label">Manager</label>
           <select
-            [(ngModel)]="order.manager"
+            [disabled]="true"
+            [(ngModel)]="order.nameManager"
             name="manager"
-            [formControl]="manager"
-            required
             id="inputManager"
             class="form-select form-control"
           >
-            <option *ngFor="let man of managers" value="{{ man.id }}">
-              {{ man.name }}
+            <option>
+              {{ order.nameManager }}
             </option>
           </select>
         </div>
         <div class="col-md-6">
           <label for="inputDispatcher" class="form-label">Dispatcher</label>
           <select
-            [(ngModel)]="order.dispatcher"
+            [disabled]="true"
+            [(ngModel)]="order.nameDispatcher"
             name="dispatcher"
-            [formControl]="manager"
             id="inputDispatcher"
             class="form-select form-control"
-            [formControl]="dispatcher"
-            required
           >
-            <option *ngFor="let dis of dispatchers" value="{{ dis.id }}">
-              {{ dis.name }}
+            <option>
+              {{ order.nameDispatcher }}
             </option>
           </select>
         </div>
         <div class="col-md-6">
           <label for="inputPriority" class="form-label">Priority</label>
           <select
+            [disabled]="true"
             [(ngModel)]="order.priority"
             name="priority"
             id="inputPriority"
             class="form-select form-control"
-            [formControl]="priority"
-            required
           >
             <option value="0">LOW</option>
             <option value="1">MEDIUM</option>
@@ -65,12 +60,11 @@
         <div class="col-md-6">
           <label for="inputStatus" class="form-label">Status</label>
           <select
+            [disabled]="true"
             [(ngModel)]="order.status"
             name="status"
             id="inputStatus"
             class="form-select form-control"
-            [formControl]="status"
-            required
           >
             <option value="0">OPEN</option>
             <option value="1">PROCESSING</option>
@@ -80,10 +74,9 @@
         <div class="col-md-8">
           <label for="inputClineName" class="form-label">Client name</label>
           <input
+            [disabled]="true"
             [(ngModel)]="order.clientName"
             name="clientName"
-            [formControl]="clientName"
-            required
             type="text"
             class="form-control"
             id="inputClineName"
@@ -93,10 +86,9 @@
         <div class="col-md-4">
           <label for="inputZip" class="form-label">Zip</label>
           <input
+            [disabled]="true"
             [(ngModel)]="order.clientZip"
             name="clientCity"
-            [formControl]="clientZip"
-            required
             type="text"
             class="form-control"
             id="inputCity"
@@ -106,10 +98,9 @@
         <div class="col-md-8">
           <label for="inputAddress" class="form-label">Address</label>
           <input
+            [disabled]="true"
             [(ngModel)]="order.clientAddress"
             name="clientAddress"
-            [formControl]="address"
-            required
             type="text"
             class="form-control"
             id="inputAddress"
@@ -120,10 +111,9 @@
         <div class="col-md-4">
           <label for="inputCity" class="form-label">City</label>
           <input
+            [disabled]="true"
             [(ngModel)]="order.clientCity"
             name="clientCity"
-            [formControl]="clientCity"
-            required
             type="text"
             class="form-control"
             id="inputCity"
@@ -134,11 +124,10 @@
         <div class="mb-3">
           <label for="inputDescription" class="form-label">Description</label>
           <textarea
+            [disabled]="true"
             [(ngModel)]="order.description"
             name="description"
-            [formControl]="description"
-            required
-            class="form-control description"
+            class="form-control"
             id="inputDescription"
             rows="6"
             placeholder="Enter Description"
@@ -146,14 +135,7 @@
         </div>
       </form>
 
-      <button
-        [disabled]="!validForm()"
-        (click)="create()"
-        class="btn btn-outline-success create"
-      >
-        Create
-      </button>
-      <button routerLink="../" class="btn btn-outline-success cancel">
+      <button routerLink="../../" class="btn btn-outline-success cancel">
         Cancel
       </button>
     </div>

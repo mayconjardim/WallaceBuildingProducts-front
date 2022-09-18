@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card text-center">
-    <div class="card-header">Create new order</div>
+    <div class="card-header">Update order</div>
     <div class="card-body">
       <form class="row g-3">
         <div class="col-md-12">
@@ -138,7 +138,7 @@
             name="description"
             [formControl]="description"
             required
-            class="form-control description"
+            class="form-control"
             id="inputDescription"
             rows="6"
             placeholder="Enter Description"
@@ -148,12 +148,12 @@
 
       <button
         [disabled]="!validForm()"
-        (click)="create()"
+        (click)="update()"
         class="btn btn-outline-success create"
       >
-        Create
+        Update
       </button>
-      <button routerLink="../" class="btn btn-outline-success cancel">
+      <button routerLink="../../" class="btn btn-outline-success cancel">
         Cancel
       </button>
     </div>
