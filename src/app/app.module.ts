@@ -28,6 +28,7 @@ import { FilterPipe } from './shared/pipes/filtro.pipe';
 import { OrderCreateComponent } from './private/components/orders/order-create/order-create.component';
 import { OrderUpdateComponent } from './private/components/orders/order-update/order-update.component';
 import { OrderReadComponent } from './private/components/orders/order-read/order-read.component';
+import { OrderPrintComponent } from './private/components/orders/order-print/order-print.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { OrderReadComponent } from './private/components/orders/order-read/order
     OrderCreateComponent,
     OrderUpdateComponent,
     OrderReadComponent,
+    OrderPrintComponent,
   ],
   imports: [
     BrowserModule,

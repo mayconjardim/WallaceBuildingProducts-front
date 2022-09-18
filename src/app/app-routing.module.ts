@@ -15,6 +15,7 @@ import { DispatcherDeleteComponent } from './private/components/dispatcher/dispa
 import { DispatcherUpdateComponent } from './private/components/dispatcher/dispatcher-update/dispatcher-update.component';
 import { OrderUpdateComponent } from './private/components/orders/order-update/order-update.component';
 import { OrderReadComponent } from './private/components/orders/order-read/order-read.component';
+import { OrderPrintComponent } from './private/components/orders/order-print/order-print.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'orders/create', component: OrderCreateComponent },
       { path: 'orders/update/:id', component: OrderUpdateComponent },
       { path: 'orders/read/:id', component: OrderReadComponent },
+      { path: 'orders/print/:id', component: OrderPrintComponent },
     ],
   },
 ];

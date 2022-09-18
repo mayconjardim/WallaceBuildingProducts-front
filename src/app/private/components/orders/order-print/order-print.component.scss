@@ -1,0 +1,70 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+img {
+  margin: 0;
+} /* margin reset*/
+h1 {
+  font-size: 18pt;
+  font-weight: 500;
+  margin-bottom: 0.5cm;
+}
+h2 {
+  font-size: 16pt;
+  font-weight: 500;
+}
+p {
+  font-size: 12pt;
+}
+
+.container-fluid {
+  margin-top: 10px;
+}
+
+.items-group {
+  border-style: solid;
+  border-color: black;
+  border-width: 1pt 1pt 1pt 1pt;
+  border-radius: 5pt;
+  padding: 3pt 3pt 3pt 3pt;
+  margin: 9pt 0 9pt 0;
+}
+
+.logotipo {
+  width: 6cm;
+  height: 4cm;
+  margin: -0.5cm;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.disclaimer,
+.address p {
+  font-size: 10pt;
+}
+
+.signature-field {
+  padding-bottom: 24pt;
+  border-bottom: solid black 1pt;
+}
+
+.container {
+  text-align: center;
+
+  .print {
+    height: 50px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    margin: 5px;
+    border: 0;
+  }
+}

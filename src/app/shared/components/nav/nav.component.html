@@ -1,36 +1,35 @@
 <div class="container">
-  <div class="logo-img">
-    <img src="assets/img/logo-wbp.svg" alt="logo" />
-  </div>
+  <div class="no-print">
+    <div class="logo-img">
+      <img src="assets/img/logo-wbp.svg" alt="logo" />
+    </div>
 
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/orders">
-        <fa-icon class="icons" [icon]="faClipboard"></fa-icon>Orders</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/managers"
-        ><fa-icon class="icons" [icon]="faAddressCard"></fa-icon>Managers</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/dispatchers">
-        <fa-icon class="icons" [icon]="faHelmetSafety"></fa-icon>Dispatchers</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/admins">
-        <fa-icon class="icons" [icon]="faUser"></fa-icon> Admin</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="logout()"
-        ><fa-icon class="icons" [icon]="faArrowRightFromBracket"></fa-icon
-        >Logout</a
-      >
-    </li>
-  </ul>
+    <ul class="nav justify-content-center no-print">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/orders">
+          <fa-icon class="icons" [icon]="faClipboard"></fa-icon>Orders</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/managers"
+          ><fa-icon class="icons" [icon]="faAddressCard"></fa-icon>Managers</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dispatchers">
+          <fa-icon class="icons" [icon]="faHelmetSafety"></fa-icon
+          >Dispatchers</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()"
+          ><fa-icon class="icons" [icon]="faArrowRightFromBracket"></fa-icon
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </div>
   <div class="content">
     <router-outlet></router-outlet>
   </div>

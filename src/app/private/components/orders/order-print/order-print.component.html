@@ -1,0 +1,57 @@
+<div class="container">
+  <button class="print no-print" (click)="printPage()">Print</button>
+</div>
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col">
+      <img src="assets/img/logo-wbp.svg" alt="logotipo" class="logotipo" />
+    </div>
+
+    <div class="row no-gutters items-group">
+      <div class="col-3 label">
+        <p>Client:</p>
+        <p>Address:</p>
+        <p>City:</p>
+        <p>Zip:</p>
+      </div>
+
+      <div class="col-9">
+        <p>{{ order.clientName }}</p>
+        <p>{{ order.clientAddress }}</p>
+        <p>{{ order.clientCity }}</p>
+        <p>{{ order.clientZip }}</p>
+      </div>
+    </div>
+
+    <div class="row no-gutters items-group">
+      <div class="col-3 label">
+        <p>Manager:</p>
+        <p>Dispatcher:</p>
+        <p>Status:</p>
+        <p>Priority:</p>
+      </div>
+
+      <div class="col-9">
+        <p>{{ order.nameManager }}</p>
+        <p>{{ order.nameDispatcher }}</p>
+        <p>{{ returnStatus(order.status) }}</p>
+        <p>{{ returnPriority(order.priority) }}</p>
+      </div>
+    </div>
+
+    <div class="row no-gutters items-group">
+      <div class="mb-3">
+        <label for="inputDescription" class="form-label">Description:</label>
+        <textarea
+          [disabled]="true"
+          [(ngModel)]="order.description"
+          name="description"
+          class="form-control"
+          id="inputDescription"
+          rows="6"
+          placeholder="Enter Description"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>
