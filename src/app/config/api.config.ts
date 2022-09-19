@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl: 'http://wallacebuildingproducts.herokuapp.com',
+  baseUrl: 'https://wallacebuildingproducts.herokuapp.com',
 };
