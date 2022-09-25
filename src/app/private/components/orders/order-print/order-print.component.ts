@@ -22,6 +22,7 @@ export class OrderPrintComponent implements OnInit {
     clientCity: '',
     clientAddress: '',
     clientName: '',
+    products: [],
   };
 
   constructor(

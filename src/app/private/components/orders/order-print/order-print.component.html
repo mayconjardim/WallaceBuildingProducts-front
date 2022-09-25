@@ -41,14 +41,25 @@
 
     <div class="row no-gutters items-group">
       <div class="mb-3">
-        <label for="inputDescription" class="form-label">Description:</label>
+        <label for="inputDescription" class="form-label">Itens:</label>
+        <ul class="list-group" *ngFor="let prod of order.products">
+          <li class="list-group-item">{{ prod.name }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row no-gutters items-group">
+      <div class="mb-3">
+        <label for="inputDescription" class="form-label"
+          >Aditional information:</label
+        >
         <textarea
           [disabled]="true"
           [(ngModel)]="order.description"
           name="description"
           class="form-control"
           id="inputDescription"
-          rows="6"
+          rows="2"
           placeholder="Enter Description"
         ></textarea>
       </div>

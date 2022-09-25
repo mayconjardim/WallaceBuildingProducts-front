@@ -28,3 +28,21 @@
     margin: 10px 0;
   }
 }
+
+ngb-pagination ::ng-deep a {
+  color: black !important;
+}
+
+ngb-pagination ::ng-deep .page-item.active .page-link {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+ngb-pagination ::ng-deep .page-item.active .page-link:focus,
+.page-link:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.1rem var(--primary-color);
+}
+
+ngb-pagination ::ng-deep .page-link:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.1rem var(--primary-color);
+}

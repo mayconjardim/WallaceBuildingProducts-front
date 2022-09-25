@@ -28,6 +28,7 @@ export class OrderUpdateComponent implements OnInit {
     clientCity: '',
     clientAddress: '',
     clientName: '',
+    products: [],
   };
 
   managers: Manager[] = [];

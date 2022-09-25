@@ -121,6 +121,19 @@
           />
         </div>
 
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">City</label>
+          <input
+            [disabled]="true"
+            [(ngModel)]="order.clientCity"
+            name="clientCity"
+            type="text"
+            class="form-control"
+            id="inputCity"
+            placeholder="Danbury"
+          />
+        </div>
+
         <div class="mb-3">
           <label for="inputDescription" class="form-label">Description</label>
           <textarea
@@ -129,7 +142,7 @@
             name="description"
             class="form-control"
             id="inputDescription"
-            rows="6"
+            rows="2"
             placeholder="Enter Description"
           ></textarea>
         </div>

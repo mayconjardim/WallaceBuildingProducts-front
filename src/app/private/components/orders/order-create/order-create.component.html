@@ -131,8 +131,95 @@
           />
         </div>
 
+        <div class="col-md-12">
+          <label for="inputProducts" class="form-label">Products</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="term"
+            name="term"
+            placeholder="Search by product name"
+          />
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let prod of products
+                    | slice: (page - 1) * pageSize:page * pageSize
+                    | filter: term
+                "
+              >
+                <td>{{ prod.name }}</td>
+                <td>{{ prod.stock }}</td>
+
+                <td>
+                  <ng-template #content let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">
+                        Product
+                      </h4>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                        (click)="d('Cross click')"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Name: {{ prod.name }}</p>
+                      <p>Stock: {{ prod.stock }}</p>
+                    </div>
+                    <div class="modal-footer">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Quantity..."
+                      />
+
+                      <button
+                        type="button"
+                        class="btn btn-outline-dark"
+                        (click)="d(addToCart(prod))"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </ng-template>
+
+                  <button class="btn btn-success" (click)="open(content)">
+                    Add
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <ngb-pagination
+            class="pagination"
+            [pageSize]="25"
+            [collectionSize]="100"
+            [(page)]="page"
+            aria-label="Default pagination"
+          ></ngb-pagination>
+        </div>
+
+        <div class="col-md-12">
+          <label for="inputCart" class="form-label">Cart</label>
+          <ul class="list-group" name="products" *ngFor="let item of items">
+            <li class="list-group-item">{{ item.name }}</li>
+          </ul>
+        </div>
+
         <div class="mb-3">
-          <label for="inputDescription" class="form-label">Description</label>
+          <label for="inputDescription" class="form-label"
+            >Additional Information</label
+          >
           <textarea
             [(ngModel)]="order.description"
             name="description"

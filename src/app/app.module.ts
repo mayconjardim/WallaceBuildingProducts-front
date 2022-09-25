@@ -29,6 +29,7 @@ import { OrderCreateComponent } from './private/components/orders/order-create/o
 import { OrderUpdateComponent } from './private/components/orders/order-update/order-update.component';
 import { OrderReadComponent } from './private/components/orders/order-read/order-read.component';
 import { OrderPrintComponent } from './private/components/orders/order-print/order-print.component';
+import { OrderCartComponent } from './private/components/orders/order-cart/order-cart.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { OrderPrintComponent } from './private/components/orders/order-print/ord
     OrderUpdateComponent,
     OrderReadComponent,
     OrderPrintComponent,
+    OrderCartComponent,
   ],
   imports: [
     BrowserModule,

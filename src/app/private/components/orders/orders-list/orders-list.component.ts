@@ -16,7 +16,7 @@ export class OrdersListComponent implements OnInit {
   orders: Observable<Orders[]>;
 
   page = 1;
-  pageSize = 20;
+  pageSize = 10;
 
   constructor(private service: OrderService) {
     this.orders = this.service.findAll();

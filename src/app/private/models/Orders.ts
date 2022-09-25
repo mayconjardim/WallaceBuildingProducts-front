@@ -1,3 +1,5 @@
+import { Product } from './Product';
+
 export interface Orders {
   id?: any;
   startDate?: string;
@@ -14,4 +16,5 @@ export interface Orders {
   manager: any;
   nameDispatcher: string;
   nameManager: string;
+  products: any[];
 }

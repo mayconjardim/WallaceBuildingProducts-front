@@ -22,6 +22,7 @@ export class OrderReadComponent implements OnInit {
     clientCity: '',
     clientAddress: '',
     clientName: '',
+    products: [],
   };
 
   constructor(
